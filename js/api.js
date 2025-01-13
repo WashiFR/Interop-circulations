@@ -8,3 +8,12 @@ export async function getIpInfo() {
         console.error(error);
     }
 }
+
+export async function getIUTLocation() {
+    try {
+        const response = await fetch('https://nominatim.openstreetmap.org/search?q=iut+nancy+charlemagne&format=json');
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}

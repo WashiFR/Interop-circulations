@@ -1,14 +1,24 @@
-import {getIpInfo} from "./api.js";
+import {getIpInfo, getIUTLocation} from "./api.js";
 import {getCovidData} from "./covid.js";
 import {createGraph} from "./graph.js";
 import {createVeloMap} from "./velo.js";
 
-const ipInfo = await getIpInfo();
+let lat = null;
+let lon = null;
+let ipInfo = await getIpInfo();
+if (!ipInfo) {
+    ipInfo = await getIUTLocation();
+    lat = ipInfo[0].lat;
+    lon = ipInfo[0].lon;
+} else {
+    lat = ipInfo.latitude;
+    lon = ipInfo.longitude;
+}
 console.log(ipInfo);
 
 const covidData = await getCovidData();
 console.log(covidData);
 
-createGraph(covidData, 'Covid cases in Maxeville');
+createGraph(covidData, 'SARS dans les égouts de Maxéville');
 
-createVeloMap([ipInfo.latitude, ipInfo.longitude]);
+createVeloMap([lat, lon]);
