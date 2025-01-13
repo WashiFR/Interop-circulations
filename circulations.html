@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="f'r">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Vélos & Covid</title>
@@ -11,6 +11,8 @@
 
     <h1>Circulations</h1>
 
+    <h2 id="polution-air"></h2>
+
     <h2>Données du covid</h2>
 
     <div>
@@ -20,6 +22,31 @@
     <h2>Carte des vélos</h2>
 
     <div id="map" style="height: 500px;"></div>
+
+    <h2>Liens utiles</h2>
+
+    <ul>
+        <li>Github : <a target="_blank"
+                        href="https://github.com/WashiFR/Interop-circulations">
+            https://github.com/WashiFR/Interop-circulations</a>
+        </li>
+        <li>API ip : <a target="_blank"
+                        href="https://ipapi.co/json/">
+            https://ipapi.co/json/</a>
+        </li>
+        <li>API pollution : <a target="_blank"
+                        href="https://services3.arcgis.com/Is0UwT37raQYl9Jj/arcgis/rest/services/ind_grandest/FeatureServer/0/query?where=lib_zone%3D%27Nancy%27&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=">
+            https://services3.arcgis.com/Is0UwT37raQYl9Jj/arcgis/rest/services/ind_grandest/FeatureServer/0</a>
+        </li>
+        <li>API covid : <a target="_blank"
+                        href="https://tabular-api.data.gouv.fr/api/resources/2963ccb5-344d-4978-bdd3-08aaf9efe514/data/?page=1&page_size=50">
+            https://tabular-api.data.gouv.fr/api/resources/2963ccb5-344d-4978-bdd3-08aaf9efe514/data/?page=1&page_size=50</a>
+        </li>
+        <li>API vélos : <a target="_blank"
+                        href="https://api.cyclocity.fr/contracts/nancy/gbfs/gbfs.json">
+            https://api.cyclocity.fr/contracts/nancy/gbfs/gbfs.json</a>
+        </li>
+    </ul>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
